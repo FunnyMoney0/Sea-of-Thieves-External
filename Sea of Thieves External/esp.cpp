@@ -116,6 +116,7 @@ namespace cheat
 
 	std::string ESP::convert_wide_string(const wchar_t *wide_string) const
 	{
+		if (!wide_string) return "";
 		std::stringstream result{ };
 		const auto size = wcslen(wide_string);
 		for (auto i = 0; i < size; ++i)
