@@ -178,7 +178,7 @@ namespace cheat
 					{
 						sdk::AAthenaCharacter character{ actor.instance() };
 						const sdk::FString name = character.player_state().player_name();
-						const std::string name_text = this->convert_wide_string(name.data().get_data(name.data().array_num()).data());
+						std::string name_text = this->convert_wide_string(name.data().get_data(name.data().array_num()).data());
 						if (name_text.empty()) name_text = "Player";
 						std::string name_draw_text = "[" + name_text + "]";
 						const float percentage = character.health_component().current_health() / character.health_component().max_health();
