@@ -116,7 +116,7 @@ namespace gui
 			WS_EX_TOPMOST | WS_EX_TRANSPARENT | WS_EX_LAYERED, this->_window_class.lpszClassName,
 			this->_title.c_str(), 
 			WS_POPUP,
-			0, 0, 1920, 1080,
+			0, 0, GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN),
 			nullptr, nullptr, instance, nullptr
 		);
 		SetLayeredWindowAttributes(this->_window, RGB(0, 0, 0), 255, LWA_ALPHA);
